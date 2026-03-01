@@ -23,7 +23,7 @@ function M.setup()
   local update = vim.schedule_wrap(M.update)
   local timer = assert(vim.uv.new_timer())
   M.update = function()
-    timer:start(100, 0, update)
+    timer:start(75, 0, update)
   end
 
   local group = vim.api.nvim_create_augroup("lazydev", { clear = true })
